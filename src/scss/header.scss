@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Piedra&display=swap");
+$pbh: 7px;
+
+.header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  .navbar {
+    width: 100%;
+    background: rgba($color: rgb(85, 84, 84), $alpha: 0.7);
+    // border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    .nav-menu {
+      list-style: none;
+      // padding: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .nav-item {
+        color: rgb(253, 252, 250);
+        // width: 3rem;
+        margin-left: 2rem;
+        padding: 0.3rem 0.5rem 0.5rem 0.5rem;
+        cursor: pointer;
+        font-family: "Piedra", cursive;
+        font-weight: 300;
+        font-size: 1.2rem;
+
+        &.active {
+          background: -webkit-linear-gradient(rgb(252, 241, 241),
+              rgb(219, 129, 129));
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        &:hover {
+          background: -webkit-linear-gradient(rgb(252, 241, 241),
+              rgb(219, 129, 129));
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .progress-bar-container {
+    width: 95%;
+    height: $pbh;
+    border: 1px rgb(219, 129, 129) solid;
+    border-radius: 30px;
+    margin-left: 2%;
+  }
+}

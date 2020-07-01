@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap");
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+    color: white;
+    font-size: 50px;
+
+    &#home {
+      background-color: #000000;
+      .title {
+        font-size: 5rem;
+        font-weight: 900;
+        margin-left: 0.5;
+        .name {
+          font-size: 10rem;
+          font-family: "Montserrat", sans-serif;
+          background-image: url(https://lh3.googleusercontent.com/proxy/GjFGu7lA3xIAW_xlfUPXEUMC_aqKxEoPnuIaxpdhJdVr4PoY0xYfa_yScdEJJlUE5vgm8jWSwe_uHJBodF8Bbj5lys00ZNilSZhQgHoryhes-q5UVaY3Xj7h7hBplSM);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: all 1s ease-in-out;
+          background-position: right center;
+          &:hover {
+            background-image: linear-gradient(
+              to right,
+              #6b7faa 0%,
+              #cc47f5 51%,
+              #ff6e7f 100%
+            );
+          }
+        }
+      }
+    }
+
+    &#works {
+      background-color: #000000;
+    }
+
+    &#contact {
+      background-color: #000000;
+    }
+  }
+}
