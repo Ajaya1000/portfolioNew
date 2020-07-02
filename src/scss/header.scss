@@ -6,7 +6,7 @@ $pbh: 7px;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 1000;
 
   .navbar {
     width: 100%;
@@ -17,6 +17,7 @@ $pbh: 7px;
     border-radius: 10%;
     display: flex;
     flex-direction: row;
+    z-index: 1000;
 
     .nav-menu {
       width: 50%;
@@ -41,10 +42,8 @@ $pbh: 7px;
         border-radius: 10px;
 
         &.active {
-          background: -webkit-linear-gradient(
-            rgb(252, 241, 241),
-            rgb(219, 129, 129)
-          );
+          background: -webkit-linear-gradient(rgb(252, 241, 241),
+              rgb(219, 129, 129));
           -webkit-background-clip: text;
           background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -53,10 +52,8 @@ $pbh: 7px;
         }
 
         &:hover {
-          background: -webkit-linear-gradient(
-            rgb(252, 241, 241),
-            rgb(219, 129, 129)
-          );
+          background: -webkit-linear-gradient(rgb(252, 241, 241),
+              rgb(219, 129, 129));
           -webkit-background-clip: text;
           background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -69,17 +66,26 @@ $pbh: 7px;
         }
       }
     }
+
     .social-menu {
       width: 50%;
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
+
       a {
         margin-right: 2rem;
         margin-top: 0.9rem;
 
         color: #fff;
         text-decoration: none;
+        transition: 0.2s linear;
+
+        &:hover {
+          color: rgb(219, 129, 129);
+          transform: scale(1.4, 1.4);
+        }
+
         // font-size: 1.2rem;
       }
     }
